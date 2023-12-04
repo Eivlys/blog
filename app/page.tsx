@@ -52,8 +52,8 @@ export default function Home() {
       </NavbarContent>
       </Navbar>
       <div>
-        {items.map(x=>{
-          return <Card className="max-w-[400px]" style={{margin:'20px'}}>
+        {items.map((x, idx)=>{
+          return <Card className="max-w-[400px]" style={{margin:'20px'}} key={idx}>
           <CardHeader className="flex gap-3">
             <div className="flex flex-col">
               <p className="text-md">{x.com}</p>
