@@ -44,7 +44,7 @@ export default function Home() {
         <div className="px-1 py-2">
           <div className="text-small font-bold">     
           <Link href="mailto:vamcheryl@gmail.com">Email</Link></div>
-          <div className="text-tiny"><Link href='https://www.linkedin.com/in/sylvie-zhang-17ba4726/'>LinkedIn</Link></div>
+          <div className="text-tiny"><Link href='https://www.linkedin.com/in/17ba4726/'>LinkedIn</Link></div>
         </div>
       </PopoverContent>
     </Popover>
