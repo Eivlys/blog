@@ -26,11 +26,54 @@ export default function Home() {
     com: "South-Central University for Nationalities",
     year: "2009 - 2013",
     content: "BA. E-Commerce",
-  }];
+  },
+  {
+    com: "South-Central University for Nationalities",
+    year: "2009 - 2013",
+    content: "BA. E-Commerce",
+  },
+  {
+    com: "South-Central University for Nationalities",
+    year: "2009 - 2013",
+    content: "BA. E-Commerce",
+  }
+];
+
+const contact = [
+  {
+    slug:'github',
+    link:'https://github.com/Eivlys'
+  },
+  {
+    slug:'linkedin',
+    link:'https://www.linkedin.com/in/17ba4726/'
+  },
+  {
+    slug:'gmail',
+    link:'mailto:vamcheryl@gmail.com'
+  }
+]
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Navbar isBordered>
+    <main className="main">
+      <div className="pg1 columns-2 h-screen">
+        <div className='flex flex-col items-center h-screen'>
+          <div className='text-white name'>SYLVIE ZHANG</div>
+          <div className='contact flex flex-row items-center'>
+            {contact.map(c=>{
+              return <Button isIconOnly>
+              <Link className="mx-15" key={c?.slug} href={c?.link}>
+                <img height="32" width="32" src={`https://cdn.simpleicons.org/${c?.slug}/white`} />
+                </Link>
+                </Button>
+            })}
+          </div>
+        </div>
+        <div className='h-screen about'>
+          About
+         
+        </div>
+        {/* <Navbar isBordered>
       <NavbarBrand>
         <h3>Sylvie.Zhang</h3>
       </NavbarBrand>
@@ -50,8 +93,12 @@ export default function Home() {
     </Popover>
     </NavbarItem>
       </NavbarContent>
-      </Navbar>
-      <div>
+      </Navbar> */}
+
+      </div>
+
+     
+      <div className="flex-col items-center justify-between p-24 after">
         {items.map((x, idx)=>{
           return <Card className="max-w-[400px]" style={{margin:'20px'}} key={idx}>
           <CardHeader className="flex gap-3">

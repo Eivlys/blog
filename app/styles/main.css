@@ -1,0 +1,25 @@
+@font-face {
+    font-family: SouthAustria;
+    src: url('./SouthAustriaDEMO.otf') format('opentype');
+}
+
+.main{
+    height: 100vh;
+    background: url('../../public/bg.jpg') no-repeat center center;
+    background-size: cover;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.name{
+    font-family: 'SouthAustria';
+    font-weight: normal;
+    font-style: normal;
+    margin: 30vh 20px;
+    font-size: 60px;
+    text-align: center;
+}
+.after{
+    backdrop-filter: blur(100px);
+    background: rgba(255,255,255,0.7);
+    overflow-y: auto;
+}
