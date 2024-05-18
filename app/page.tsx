@@ -61,15 +61,15 @@ const contact = [
           <div className='text-white name'>SYLVIE ZHANG</div>
           <div className='contact flex flex-row items-center'>
             {contact.map(c=>{
-              return <Button isIconOnly>
-              <Link className="mx-15" key={c?.slug} href={c?.link}>
+              return <div className="m-3">
+              <Link className="mx-15" key={c?.slug} href={c?.link} target="_blank">
                 <img height="32" width="32" src={`https://cdn.simpleicons.org/${c?.slug}/white`} />
                 </Link>
-                </Button>
+                </div>
             })}
           </div>
         </div>
-        <div className='h-screen about'>
+        <div className='flex flex-row justiify-center items-center h-screen text-white about'>
           About
          
         </div>
