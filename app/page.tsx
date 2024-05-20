@@ -95,7 +95,7 @@ const contact = [
             <div className="content">
               <div className="position">{x?.poi} ﹫ {x.corp}</div>
               <div className="desc">{x?.desc}</div>
-              {(x?.tech||[])?.map(t=> <Chip className='tag' color="secondary" variant="bordered" size="md">{t}</Chip>)}
+              {(x?.tech||[])?.map(t=> <Chip key={t} className='tag' color="secondary" variant="bordered" size="md">{t}</Chip>)}
             </div>
           </div>
         })}
