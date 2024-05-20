@@ -1,41 +1,51 @@
 import React from "react"
-import {Navbar, Divider, NavbarContent, NavbarItem, Link, Card, CardHeader, CardBody, NavbarBrand, Button, PopoverTrigger, Popover, PopoverContent, Snippet} from "@nextui-org/react";
+import {Navbar, Divider, NavbarContent, NavbarItem, Link, Card, CardHeader, CardBody, NavbarBrand, Button, PopoverTrigger, Popover, PopoverContent, Snippet, Chip} from "@nextui-org/react";
 
 export default function Home() {
   const items = [{
-    com: "Farfetch",
-    year: "2020 - Present",
-    content: "Senior Frontend Engineer",
+    corp: "Farfetch",
+    year: "08/2020 - 03/2024",
+    poi: "Senior Frontend Engineer",
+    desc:'descdescdescdescdesc',
+    tech:['Typescript','React','AntD','NextJS']
   },
   {
-    com: "Momo Technology Company Limited",
-    year: "2018 - 2020",
-    content: "Web Developer",
+    corp: "Momo Technology Company Limited",
+    year: "11/2018 - 08/2020",
+    poi: "Web Developer",
+    desc:'',
+    tech:['Javascript','Vue','Electron','ElementUI','NodeJS']
   },
   {
-    com: "CreditEase",
-    year: "2016 - 2018",
-    content: "Web Developer",
+    corp: "CreditEase",
+    year: "03/2016 - 10/2018",
+    poi: "Web Developer",    
+    desc:'',
+    tech:['Javascript','Angular','MaterialUI','NodeJS']
   },
   {
-    com: "Beihang University",
-    year: "2013 - 2016",
-    content: "M.Eng. Interaction Design",
+    corp: "Beihang University",
+    year: "09/2013 - 06/2016",
+    poi: "M.Eng. Interaction Design",
+    desc:'',
   },
   {
-    com: "South-Central University for Nationalities",
+    corp: "South-Central University for Nationalities",
+    year: "09/2009 - 06/2013",
+    poi: "BA. E-Commerce",
+    desc:'',
+  },
+  {
+    corp: "South-Central University for Nationalities",
     year: "2009 - 2013",
-    content: "BA. E-Commerce",
+    poi: "BA. E-Commerce",
+    desc:'',
   },
   {
-    com: "South-Central University for Nationalities",
+    corp: "South-Central University for Nationalities",
     year: "2009 - 2013",
-    content: "BA. E-Commerce",
-  },
-  {
-    com: "South-Central University for Nationalities",
-    year: "2009 - 2013",
-    content: "BA. E-Commerce",
+    poi: "BA. E-Commerce",
+    desc:'',
   }
 ];
 
@@ -73,48 +83,27 @@ const contact = [
           About
          
         </div>
-        {/* <Navbar isBordered>
-      <NavbarBrand>
-        <h3>Sylvie.Zhang</h3>
-      </NavbarBrand>
-      <NavbarContent justify="end">
-        <NavbarItem>
-        <Popover placement="bottom" offset={20} showArrow>
-      <PopoverTrigger>
-        <Button style={{color: '#fff',background:'#000'}}>Contact</Button>
-      </PopoverTrigger>
-      <PopoverContent>
-        <div className="px-1 py-2">
-          <div className="text-small font-bold">     
-          <Link href="mailto:vamcheryl@gmail.com">Email</Link></div>
-          <div className="text-tiny"><Link href='https://www.linkedin.com/in/17ba4726/'>LinkedIn</Link></div>
-        </div>
-      </PopoverContent>
-    </Popover>
-    </NavbarItem>
-      </NavbarContent>
-      </Navbar> */}
-
       </div>
-
      
-      <div className="flex-col items-center justify-between p-24 after">
+      <div className="flex-col items-center justify-center py-20 after">
+        <div className="title">Experiences</div>
+        <div className="block">
         {items.map((x, idx)=>{
-          return <Card className="max-w-[400px]" style={{margin:'20px'}} key={idx}>
-          <CardHeader className="flex gap-3">
-            <div className="flex flex-col">
-              <p className="text-md">{x.com}</p>
-              <p className="text-small text-default-500">{x.year}</p>
+          return <div className="flex flex-row flex-wrap justify-center align-center my-10">
+            <div className="date">{x?.year?.toUpperCase()}</div>
+            <div className="link"></div>
+            <div className="content">
+              <div className="position">{x?.poi} ﹫ {x.corp}</div>
+              <div className="desc">{x?.desc}</div>
+              {(x?.tech||[])?.map(t=> <Chip className='tag' color="secondary" variant="bordered" size="md">{t}</Chip>)}
             </div>
-          </CardHeader>
-          <Divider/>
-          <CardBody>
-            <p>{x.content}</p>
-          </CardBody>
-          <Divider/>
-        </Card>
+          </div>
         })}
-      
+        </div>
+        <div className="title">Tools</div>
+        <div className="block"></div>
+        <div className="title">Books·Podcasts</div>
+        <div className="block"></div>
       </div>
     </main>
   )
