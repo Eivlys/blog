@@ -89,7 +89,7 @@ const contact = [
         <div className="title">Experiences</div>
         <div className="block">
         {items.map((x, idx)=>{
-          return <div className="flex flex-row flex-wrap justify-center align-center my-10">
+          return <div key={idx} className="flex flex-row flex-wrap justify-center align-center my-10">
             <div className="date">{x?.year?.toUpperCase()}</div>
             <div className="link"></div>
             <div className="content">
