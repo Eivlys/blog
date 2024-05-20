@@ -6,46 +6,42 @@ export default function Home() {
     corp: "Farfetch",
     year: "08/2020 - 03/2024",
     poi: "Senior Frontend Engineer",
-    desc:'descdescdescdescdesc',
-    tech:['Typescript','React','AntD','NextJS']
+    desc:"Provided technical support for luxury brands by developing web apps based on the WeChat platform using React and Typescript. Developed and maintain web components, frameworks, and help to establish standardized deployment processes to increase development efficiency. Conducted technical interviews in both English and Chinese for the front-end positions.",
+    tech:['Typescript','React','AntD','NextJS','Elasticsearch']
   },
   {
     corp: "Momo Technology Company Limited",
     year: "11/2018 - 08/2020",
     poi: "Web Developer",
-    desc:'',
-    tech:['Javascript','Vue','Electron','ElementUI','NodeJS']
+    desc:"Developed and maintained the front-end deployment platform using NodeJS, providing deployment support for all front-end projects of the department. Established a log aggregate platform utilizing Elasticsearch based on the user's lifetime.Optimized web page performance by developing a web app using Vue and WEEX.",
+    tech:['Javascript','Vue','ElementUI','NodeJS','Elasticsearch','Electron']
   },
   {
     corp: "CreditEase",
     year: "03/2016 - 10/2018",
     poi: "Web Developer",    
-    desc:'',
+    desc:'Developed and maintained both the front-end and back-end of the Requirements Management System using AngularJS and NodeJS. Cooperated with API teams to develop web pages of the Security Flaw Report Platform that helps maintain the security and stability of each online service of the company.',
     tech:['Javascript','Angular','MaterialUI','NodeJS']
   },
   {
-    corp: "Beihang University",
-    year: "09/2013 - 06/2016",
-    poi: "M.Eng. Interaction Design",
-    desc:'',
+    corp: "Siemens Technology China",
+    year: "08/2015 - 02/2016",
+    poi: "Data Visualization Design Intern",
+    desc:'Utilized D3 and eCharts to design and implement the visualization of energy data',
+    tech:['D3js','eCharts']
   },
   {
-    corp: "South-Central University for Nationalities",
-    year: "09/2009 - 06/2013",
-    poi: "BA. E-Commerce",
-    desc:'',
+    corp: "Beijing Yunjiang Technology Ltd.",
+    year: "12/2014 - 07/2015",
+    poi: "Web Development Intern",
+    desc:"Developed the front end for the company's operational system and quiz system using the Django Template and Bootstrap from zero to one",
+    tech:['Javascript','Django Template']
   },
   {
-    corp: "South-Central University for Nationalities",
-    year: "2009 - 2013",
-    poi: "BA. E-Commerce",
-    desc:'',
-  },
-  {
-    corp: "South-Central University for Nationalities",
-    year: "2009 - 2013",
-    poi: "BA. E-Commerce",
-    desc:'',
+    corp: "Baidu Inc. Music Department",
+    year: "04/2014 - 11/2014",
+    poi: "Product Intern",
+    desc:'Formulated and wrote product and interaction strategies for the Baidu Music iOS platform, launched more than 3 versions within the internship. Analyzed and categorized user feedbacks.',
   }
 ];
 
@@ -62,13 +58,13 @@ const contact = [
     slug:'gmail',
     link:'mailto:vamcheryl@gmail.com'
   }
-]
+];
 
   return (
     <main className="main">
       <div className="pg1 columns-2 h-screen">
         <div className='flex flex-col items-center h-screen'>
-          <div className='text-white name'>SYLVIE ZHANG</div>
+          <div className='text-white name'>Sylvie Zhang</div>
           <div className='contact flex flex-row items-center'>
             {contact.map(c=>{
               return <div key={c?.slug} className="m-3">
@@ -93,13 +89,15 @@ const contact = [
             <div className="date">{x?.year?.toUpperCase()}</div>
             <div className="link"></div>
             <div className="content">
-              <div className="position">{x?.poi} ﹫ {x.corp}</div>
+              <div className="position">{x?.poi}﹫{x.corp}</div>
               <div className="desc">{x?.desc}</div>
               {(x?.tech||[])?.map(t=> <Chip key={t} className='tag' color="secondary" variant="bordered" size="md">{t}</Chip>)}
             </div>
           </div>
         })}
         </div>
+        <div className="title">Skills</div>
+        <div className="block"></div>
         <div className="title">Tools</div>
         <div className="block"></div>
         <div className="title">Books·Podcasts</div>
