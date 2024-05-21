@@ -70,7 +70,7 @@ export default function Home() {
     <main className="main w-full">
       <div className="pg1 h-screen w-full">
         <div className='items-center'>
-          <div className='text-white name'>Hi, I'm Sylvie Zhang</div>
+          <div className='text-white name'>Hi, I&apos;m Sylvie Zhang</div>
         </div>
         <div className='text-white text-center w-full'>
           About
@@ -84,7 +84,7 @@ export default function Home() {
             return <div key={idx} className="flex flex-col md:flex-row flex-wrap justify-center items-center md:items-start my-20">
               <div className="date">{x?.year?.toUpperCase()}</div>
               <div className="link">
-                <img height="26" width="26" src={`https://cdn.simpleicons.org/${x?.icon}/66666699`} />
+                {x?.icon && <img height="26" width="26" src={`https://cdn.simpleicons.org/${x?.icon}/66666699`} />}
               </div>
               <div className="content">
                 <div className="position">{x?.poi}﹫{x.corp}</div>

@@ -720,10 +720,6 @@ video {
   margin: 0px;
 }
 
-.m-3 {
-  margin: 0.75rem;
-}
-
 .m-2 {
   margin: 0.5rem;
 }
@@ -763,14 +759,14 @@ video {
   margin-bottom: 0.25rem;
 }
 
-.my-10 {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-}
-
 .my-16 {
   margin-top: 4rem;
   margin-bottom: 4rem;
+}
+
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .my-\[calc\(\(theme\(spacing\.5\)-theme\(spacing\.1\)\)\/2\)\] {
@@ -786,26 +782,6 @@ video {
 .my-\[calc\(\(theme\(spacing\.7\)-theme\(spacing\.5\)\)\/2\)\] {
   margin-top: calc((1.75rem - 1.25rem) / 2);
   margin-bottom: calc((1.75rem - 1.25rem) / 2);
-}
-
-.my-5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-
-.my-3 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
-.my-20 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-
-.mx-10 {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
 }
 
 .-mr-2 {
@@ -6745,15 +6721,6 @@ body {
     margin-bottom: 4rem;
   }
 
-  .sm\:my-5 {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .sm\:flex-col {
-    flex-direction: column;
-  }
-
   .sm\:items-start {
     align-items: flex-start;
   }
@@ -6792,33 +6759,12 @@ body {
 }
 
 @media (min-width: 768px) {
-  .md\:my-10 {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .md\:my-0 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-
   .md\:flex-row {
     flex-direction: row;
   }
 
   .md\:items-start {
     align-items: flex-start;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:my-10 {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .lg\:flex-row {
-    flex-direction: row;
   }
 }
 
