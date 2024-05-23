@@ -68,51 +68,52 @@ export default function Home() {
 
   return (
     <main className="main w-full">
-      <div className="pg1 h-screen w-full">
+      <div className="pg1 h-screen w-full fixed top-0">
         <div className='items-center'>
           <div className='text-white name'>Hi, I&apos;m Sylvie Zhang</div>
         </div>
-        <div className='text-white text-center w-full'>
-          About
+        <div className='text-white text-center w-full text-lg	font-arial'>
+          Frontend Developer since 2016 | Passionate about philosophy and psychology | Boxing player
         </div>
       </div>
-
-      <div className="flex-col items-center justify-center py-20 after">
-        <div className="title">Experiences</div>
-        <div className="block">
-          {items.map((x, idx) => {
-            return <div key={idx} className="flex flex-col md:flex-row flex-wrap justify-center items-center md:items-start my-20">
-              <div className="date">{x?.year?.toUpperCase()}</div>
-              <div className="link">
-                {x?.icon && <img height="26" width="26" src={`https://cdn.simpleicons.org/${x?.icon}/66666699`} />}
-              </div>
-              <div className="content">
-                <div className="position">{x?.poi}﹫{x.corp}</div>
-                <div className="desc">{x?.desc}</div>
-                {(x?.tech || [])?.map(t => <Chip key={t} className='tag' color="secondary" variant="bordered" size="md">{t}</Chip>)}
-              </div>
-            </div>
-          })}
-        </div>
-        {/* <div className="title">Skills</div>
-        <div className="block"></div> */}
-        <div className="title">Tools</div>
-        <div className="block"></div>
-        {/* <div className="title">Projects</div>
-        <div className="block"></div> */}
-        <div className="flex flex-row items-center justify-between absolute w-full">
-          <div>Desc...</div>
-          <div className='flex flex-row items-center justify-center'>
-            {contact.map(c => {
-              return <div key={c?.slug} className="m-2">
-                <Link href={c?.link} target="_blank">
-                  <img height="28" width="28" src={`https://cdn.simpleicons.org/${c?.slug}/white`} />
-                </Link>
+      <div className="wrapper">
+        <div className="flex-col items-center justify-center py-20 after">
+          <div className="title">Experiences</div>
+          <div className="block">
+            {items.map((x, idx) => {
+              return <div key={idx} className="flex flex-col md:flex-row flex-wrap justify-center items-center md:items-start my-20 block-item">
+                <div className="date">{x?.year?.toUpperCase()}</div>
+                <div className="link">
+                  {x?.icon ? <img height="20" width="20" src={`https://cdn.simpleicons.org/${x?.icon}/66666699`} /> : <div className="text-center text-xs">❤</div>}
+                </div>
+                <div className="content">
+                  <div className="position">{x?.poi}﹫{x.corp}</div>
+                  <div className="desc">{x?.desc}</div>
+                  {(x?.tech || [])?.map(t => <Chip key={t} className='tag' color="secondary" variant="bordered" size="md">{t}</Chip>)}
+                </div>
               </div>
             })}
           </div>
-        </div>
+          {/* <div className="title">Skills</div>
+        <div className="block"></div> */}
+          {/* <div className="title">Tools</div>
+        <div className="block"></div> */}
+          {/* <div className="title">Projects</div>
+        <div className="block"></div> */}
+          <div className="flex flex-col md:flex-row items-center justify-center md:justify-between fixed w-full bottom-0 p-2">
+            <div></div>
+            <div className='flex flex-row items-center justify-center'>
+              {contact.map(c => {
+                return <div key={c?.slug} className="m-1">
+                  <Link href={c?.link} target="_blank">
+                    <img height="28" width="28" src={`https://cdn.simpleicons.org/${c?.slug}/white`} />
+                  </Link>
+                </div>
+              })}
+            </div>
+          </div>
 
+        </div>
       </div>
     </main>
   )
