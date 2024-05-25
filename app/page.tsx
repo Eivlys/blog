@@ -70,8 +70,12 @@ export default function Home() {
     <main className="main w-full">
       <div className="pg1 h-screen w-full fixed top-0">
         <div className='text-white text-center name'>Hi, I&apos;m Sylvie Zhang</div>
-        <div className='text-white text-center w-4/5 text-lg font-arial mx-auto'>
-          Frontend Developer since 2016 | Passionate about philosophy and psychology | Boxing player
+        <div className='flex flex-col md:flex-row justify-center text-white text-center w-4/5 text-lg font-arial mx-auto'>
+          <div>Front-end Developer since 2016</div>
+          <div className="hidden md:block"> ｜ </div>
+          <div>Passionate about philosophy and psychology</div>
+          <div className="hidden md:block"> ｜ </div>
+          <div>Boxing player</div>
         </div>
       </div>
       <div className="wrapper">
@@ -85,7 +89,7 @@ export default function Home() {
                   {x?.icon ? <img height="20" width="20" src={`https://cdn.simpleicons.org/${x?.icon}/66666699`} /> : <div className="text-center text-xs">❤</div>}
                 </div>
                 <div className="content">
-                  <div className="position">{x?.poi}﹫{x.corp}</div>
+                  <div className="subtitle">{x?.poi}﹫{x.corp}</div>
                   <div className="desc">{x?.desc}</div>
                   {(x?.tech || [])?.map(t => <Chip key={t} className='tag' color="secondary" variant="bordered" size="md">{t}</Chip>)}
                 </div>
@@ -94,19 +98,25 @@ export default function Home() {
           </div>
           {/* <div className="title">Tools</div>
           <div className="block">
-            <div></div>
-            VS Code · Iterm2 · Chrome Dev Tools · Figma · Typora · Notion
-            </div> */}
+            <div className="w-1/2 mx-auto">
+              <div className="subtitle">Dev Tools</div>
+              <div className="desc">VS Code · Iterm2 · Chrome Dev Tools</div>
+            </div>
+            <div className="w-1/2 mx-auto">
+              <div className="subtitle">Productive</div>
+              <div className="desc">Notion · Figma · Typora</div>
+            </div>
+          </div> */}
 
           {/* <div className="title">Projects</div>
         <div className="block"></div> */}
-          <div className="flex flex-col md:flex-row items-center justify-center md:justify-between fixed w-full bottom-0 p-2">
-            <div></div>
+          <div className="flex flex-col md:flex-row items-center justify-center md:justify-between fixed w-full bottom-0 py-3 px-5 bg-white/70">
+            <div className="text-sm font-arial text-slate-500	mb-3 md:mb-0">© 2024 Sylvie Zhang all rights reserved</div>
             <div className='flex flex-row items-center justify-center'>
               {contact.map(c => {
-                return <div key={c?.slug} className="m-1">
-                  <Link href={c?.link} target="_blank">
-                    <img height="28" width="28" src={`https://cdn.simpleicons.org/${c?.slug}/white`} />
+                return <div key={c?.slug} className="mx-1">
+                  <Link href={c?.link} target="_blank" className='flex items-center justify-center'>
+                    <img height="24" width="24" src={`https://cdn.simpleicons.org/${c?.slug}/black`} />
                   </Link>
                 </div>
               })}
