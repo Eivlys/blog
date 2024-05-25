@@ -67,8 +67,8 @@ export default function Home() {
   ];
 
   return (
-    <main className="main w-full">
-      <div className="pg1 h-screen w-full fixed top-0">
+    <main className="main h-screen w-full">
+      <div className="pg1 h-dvh w-full fixed top-0">
         <div className='text-white text-center name'>Hi, I&apos;m Sylvie Zhang</div>
         <div className='flex flex-col md:flex-row justify-center text-white text-center w-4/5 text-lg font-arial mx-auto'>
           <div>Front-end Developer since 2016</div>
