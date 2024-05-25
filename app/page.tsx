@@ -69,15 +69,13 @@ export default function Home() {
   return (
     <main className="main w-full">
       <div className="pg1 h-screen w-full fixed top-0">
-        <div className='items-center'>
-          <div className='text-white name'>Hi, I&apos;m Sylvie Zhang</div>
-        </div>
-        <div className='text-white text-center w-full text-lg	font-arial'>
+        <div className='text-white text-center name'>Hi, I&apos;m Sylvie Zhang</div>
+        <div className='text-white text-center w-4/5 text-lg font-arial mx-auto'>
           Frontend Developer since 2016 | Passionate about philosophy and psychology | Boxing player
         </div>
       </div>
       <div className="wrapper">
-        <div className="flex-col items-center justify-center py-20 after">
+        <div className="flex-col items-center justify-center py-10 after">
           <div className="title">Experiences</div>
           <div className="block">
             {items.map((x, idx) => {
@@ -94,10 +92,12 @@ export default function Home() {
               </div>
             })}
           </div>
-          {/* <div className="title">Skills</div>
-        <div className="block"></div> */}
           {/* <div className="title">Tools</div>
-        <div className="block"></div> */}
+          <div className="block">
+            <div></div>
+            VS Code · Iterm2 · Chrome Dev Tools · Figma · Typora · Notion
+            </div> */}
+
           {/* <div className="title">Projects</div>
         <div className="block"></div> */}
           <div className="flex flex-col md:flex-row items-center justify-center md:justify-between fixed w-full bottom-0 p-2">
