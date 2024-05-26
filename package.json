@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "npm run open-browser && next dev",
+    "style": "npx tailwindcss -i ./app/styles/global.css -o ./app/styles/output.css --watch",
     "open-browser": "open http://localhost:3000",
     "build": "next build",
     "start": "next start",
