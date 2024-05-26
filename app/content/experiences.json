@@ -1,0 +1,73 @@
+[
+    {
+        "corp": "Farfetch",
+        "year": "Aug 2020 - Mar 2024",
+        "poi": "Senior Frontend Engineer",
+        "desc": "Provided technical support for luxury brands by developing web apps based on the WeChat platform using React and Typescript. Developed and maintained web components, and frameworks, and helped to establish standardized deployment processes to increase development efficiency. Conducted technical interviews in both English and Chinese for the front-end positions.",
+        "tech": [
+            "Typescript",
+            "React",
+            "AntD",
+            "NextJS",
+            "Elasticsearch"
+        ],
+        "icon": "react"
+    },
+    {
+        "corp": "Momo Technology Company Limited",
+        "year": "Nov 2018 - Aug 2020",
+        "poi": "Web Developer",
+        "desc": "Developed and maintained the front-end deployment platform using NodeJS, providing deployment support for all front-end projects of the department. Established a log aggregate platform utilizing Elasticsearch based on the user's lifetime.Optimized web page performance by developing a web app using Vue and WEEX.",
+        "tech": [
+            "Javascript",
+            "Vue",
+            "ElementUI",
+            "NodeJS",
+            "Elasticsearch",
+            "Electron"
+        ],
+        "icon": "vuedotjs"
+    },
+    {
+        "corp": "CreditEase",
+        "year": "Mar 2016 - Oct 2018",
+        "poi": "Web Developer",
+        "desc": "Developed and maintained both the front-end and back-end of the Requirements Management System using AngularJS and NodeJS. Cooperated with API teams to develop web pages of the Security Flaw Report Platform that helps maintain the security and stability of each online service of the company.",
+        "tech": [
+            "Javascript",
+            "Angular",
+            "MaterialUI",
+            "NodeJS"
+        ],
+        "icon": "angular"
+    },
+    {
+        "corp": "Siemens Technology China (Intern)",
+        "year": "Aug 2015 - Feb 2016",
+        "poi": "Data Visualization Design Intern",
+        "desc": "Designed and implemented energy data visualization utilizing D3.js and eCharts, helping to improve data readability and data analysis efficiency.",
+        "tech": [
+            "D3js",
+            "eCharts"
+        ],
+        "icon": "d3dotjs"
+    },
+    {
+        "corp": "Beijing Yunjiang Technology Ltd. (Intern)",
+        "year": "Dec 2014 - Jul 2015",
+        "poi": "Web Development Intern",
+        "desc": "Developed the front end for the company's operational system and quiz system using the Django Template and Bootstrap from zero to one.",
+        "tech": [
+            "Javascript",
+            "Django Template"
+        ],
+        "icon": "django"
+    },
+    {
+        "corp": "Baidu Inc. Music Department (Intern)",
+        "year": "April 2014 - Nov 2014",
+        "poi": "Product Intern",
+        "desc": "Formulated and wrote product and interaction strategies for the Baidu Music iOS platform, launched more than 3 versions within the internship. Analyzed and categorized user feedbacks.",
+        "icon": ""
+    }
+]
