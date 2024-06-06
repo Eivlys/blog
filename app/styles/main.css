@@ -1,11 +1,11 @@
 @font-face {
     font-family: SouthAustria;
-    src: url('./SouthAustriaDEMO.otf') format('opentype');
+    src: url('fonts/SouthAustriaDEMO.otf') format('opentype');
 }
 
 @font-face {
     font-family: Arial;
-    src: url('./ARIAL.TTF') format('truetype');
+    src: url('fonts/ARIAL.TTF') format('truetype');
 }
 
 .main {

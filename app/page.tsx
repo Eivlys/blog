@@ -41,7 +41,7 @@ export default function Home() {
 						{Tools.map(t => {
 							return <div key={t?.type} className="flex flex-col md:flex-row flex-wrap justify-center items-center my-5 md:my-3 block-item">
 								<div className='font-arial font-semibold w-48 text-center md:text-right text-slate-900'>{t?.type}:</div>
-								<Link target='_blank' href={t?.link} color='secondary'><div className='font-arial w-60 pl-3 text-center md:text-left'>{t?.name}</div></Link>
+								<Link target='_blank' href={t?.link} color='secondary'><div className='font-arial w-60 md:pl-3 text-center md:text-left'>{t?.name}</div></Link>
 							</div>
 						})}
 					</div>
