@@ -1,0 +1,22 @@
+[
+    {
+        "type": "Coding",
+        "name": "Visual Studio Code",
+        "link": "https://code.visualstudio.com/"
+    },
+    {
+        "type": "Terminal",
+        "name": "iTerm2",
+        "link": "https://iterm2.com/"
+    },
+    {
+        "type": "Note",
+        "name": "Notion",
+        "link": "https://www.notion.so/"
+    },
+    {
+        "type": "Diagram",
+        "name": "Mermaid",
+        "link": "https://mermaid.js.org/"
+    }
+]

@@ -43,6 +43,10 @@
     position: relative;
     z-index: 10;
 }
+.block {
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
 .title {
     font-family: 'SouthAustria';
     font-weight: normal;
@@ -52,7 +56,7 @@
     width: 100%;
     text-align: center;
 }
-.date {
+.left {
     color: rgb(145, 145, 145);
     font-size: 1rem;
     width: 200px;
@@ -72,10 +76,9 @@
     overflow: hidden;
     color: #999;
 }
-.block-item:hover .date {
+.block-item:hover .left {
     font-weight: bold;
     color: #3e3e3e;
-    text-shadow: 0 0 20px rgb(255, 254, 188);
 }
 
 .block-item:hover .link {
@@ -107,7 +110,7 @@
 }
 
 @media only screen and (max-width: 780px) {
-    .date {
+    .left {
         text-align: center;
     }
     .name {
