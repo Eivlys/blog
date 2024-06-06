@@ -17,6 +17,17 @@
     overflow-x: hidden;
     position: relative;
 }
+.header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 20px;
+    align-items: center;
+}
 .name {
     font-family: 'SouthAustria';
     font-weight: normal;

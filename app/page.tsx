@@ -20,6 +20,10 @@ export default function Home() {
 	return (
 		<main className="main w-full">
 			<div className="pg1 h-svh w-full fixed top-0">
+				<div className='header'>
+					{/* <div>About</div>
+					<div>Toolbox</div> */}
+				</div>
 				<div className='text-white text-center name'>Hi, I&apos;m Sylvie Zhang</div>
 				<div className='flex flex-col md:flex-row justify-center text-white text-center w-4/5 text-lg font-arial mx-auto'>
 					<div>Front-end Developer since 2016</div>
@@ -66,7 +70,7 @@ export default function Home() {
 								<div className="content">
 									<div className="subtitle">{x?.poi}﹫{x.corp}</div>
 									<div className="desc">{x?.desc}</div>
-									<div className='flex flex-row flex-wrap'>{(x?.tech || [])?.map(t => <div key={t} className='min-w-20 min-h-5 rounded-full px-3 py-1 mr-1 mb-2 bg-white/50 text-slate-600'>{t}</div>)}</div>
+									<div className='flex flex-row flex-wrap'>{(x?.tech || [])?.map(t => <div key={t} className='min-w-20 min-h-5 rounded-full px-3 py-1 text-center mr-1 mb-2 bg-white/50 text-slate-600'>{t}</div>)}</div>
 								</div>
 							</div>
 						})}
