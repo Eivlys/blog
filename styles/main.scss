@@ -9,9 +9,9 @@
 }
 
 .main {
-    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
-    background: url('../../public/bg.jpg') no-repeat top center;
+    background: url('../public/bg.jpg') no-repeat top center;
     background-size: cover;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -87,14 +87,16 @@
     overflow: hidden;
     color: #999;
 }
-.block-item:hover .left {
-    font-weight: bold;
-    color: #3e3e3e;
+.block-item:hover {
+    .left {
+        font-weight: bold;
+        color: #3e3e3e;
+    }
+    .link {
+        box-shadow: 0 0 20px rgb(255, 254, 188);
+    }
 }
 
-.block-item:hover .link {
-    box-shadow: 0 0 20px rgb(255, 254, 188);
-}
 .content {
     width: 50%;
 }
