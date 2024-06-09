@@ -1,5 +1,4 @@
-import './styles/output.css'
-import './styles/main.css'
+import '@/styles/global.css'
 import type { Metadata } from 'next'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { Inter } from 'next/font/google'
