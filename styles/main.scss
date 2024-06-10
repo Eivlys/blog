@@ -1,3 +1,6 @@
+@import './var.scss';
+@import './mixin.scss';
+
 @font-face {
     font-family: SouthAustria;
     src: url('fonts/SouthAustriaDEMO.otf') format('opentype');
@@ -11,12 +14,84 @@
 .main {
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
-    background: url('../public/bg.jpg') no-repeat top center;
-    background-size: cover;
     overflow-y: scroll;
     overflow-x: hidden;
     position: relative;
+    background: url('../public/bg.jpg') no-repeat center center;
+    background-size: cover;
 }
+.banner {
+    height: 40%;
+    width: 100%;
+    // backdrop-filter: blur(50px);
+    // background: linear-gradient(
+    //     to bottom,
+    //     transparent,
+    //     rgba(255, 255, 255, 0.7)
+    // );
+    .name {
+        font-family: $font-family-title;
+        font-weight: normal;
+        font-style: normal;
+        padding-top: 8%;
+        font-size: 80px;
+        text-align: center;
+        color: $font-color-white;
+        margin-top: 10vh;
+    }
+}
+
+.content {
+    width: 960px;
+    // background: #fff;
+    height: auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav {
+    @include flex-row-center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 0;
+    .nav-item {
+        width: 150px;
+        margin: 0 10px;
+        background: #fff;
+        font-family: $font-family-subtitle;
+        margin-bottom: 20px;
+    }
+}
+
+.global-footer {
+    @include flex-row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    backdrop-filter: blur(100px);
+    background: rgba(255, 255, 255, 0.7);
+    padding: 0 20px;
+    .word {
+        font-family: $font-family-text;
+        font-size: $font-size-base;
+        color: $font-color-text;
+    }
+    .link {
+        @include flex-row-center;
+    }
+    .link-item {
+        margin-left: 10px;
+    }
+}
+
+// ====================
+// old style
+// ====================
+
 .header {
     position: fixed;
     z-index: 1;
@@ -28,14 +103,7 @@
     padding: 0 20px;
     align-items: center;
 }
-.name {
-    font-family: 'SouthAustria';
-    font-weight: normal;
-    font-style: normal;
-    padding: 30vh 20px;
-    font-size: 80px;
-    text-align: center;
-}
+
 .desc {
     font-family: Arial;
     font-size: 1.2rem;
@@ -76,17 +144,17 @@
     line-height: 1.4rem;
     font-family: Arial;
 }
-.link {
-    width: 1.4rem;
-    height: 1.4rem;
-    display: block;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 0.2rem;
-    margin: 0 1rem;
-    border-radius: 50%;
-    overflow: hidden;
-    color: #999;
-}
+// .link {
+//     width: 1.4rem;
+//     height: 1.4rem;
+//     display: block;
+//     background-color: rgba(255, 255, 255, 0.7);
+//     padding: 0.2rem;
+//     margin: 0 1rem;
+//     border-radius: 50%;
+//     overflow: hidden;
+//     color: #999;
+// }
 .block-item:hover {
     .left {
         font-weight: bold;
@@ -97,9 +165,6 @@
     }
 }
 
-.content {
-    width: 50%;
-}
 .subtitle {
     color: #222;
     font-size: 1.2rem;
@@ -116,25 +181,19 @@
 .tag {
     margin: 5px 5px 5px 0;
 }
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
 
 @media only screen and (max-width: 780px) {
-    .left {
-        text-align: center;
-    }
-    .name {
-        padding: 25vh 20px;
-        font-size: 50px;
-    }
-    .link {
-        margin: 0.8rem 0;
+    .banner {
+        height: auto;
+        .name {
+            margin-top: 16vh;
+            padding: 0 20px;
+            font-size: 50px;
+        }
     }
     .content {
-        width: 85%;
+        margin-top: 10vh;
+        width: 90%;
     }
     .subtitle {
         text-align: center;

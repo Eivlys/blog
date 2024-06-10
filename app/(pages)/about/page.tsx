@@ -1,9 +1,8 @@
 import React from "react"
-import { Link, Chip } from "@nextui-org/react";
 import Experiences from '@/json/experiences.json';
-import Contact from '@/json/contact.json';
 import Equipment from '@/json/equipment.json';
 import Tools from '@/json/tools.json';
+import Link from 'next/link';
 
 export default function About() {
     return <div>
@@ -49,18 +48,7 @@ export default function About() {
                 })}
             </div>
 
-            <div className="flex flex-col md:flex-row items-center justify-center md:justify-between fixed w-full bottom-0 py-3 px-5 bg-white/70">
-                <div className="text-sm font-arial text-slate-500 mb-3 md:mb-0">© 2024 Sylvie Zhang all rights reserved</div>
-                <div className='flex flex-row items-center justify-center'>
-                    {Contact.map(c => {
-                        return <div key={c?.slug} className="mx-1">
-                            <Link href={c?.link} target="_blank" className='flex items-center justify-center'>
-                                <img height="24" width="24" src={`https://cdn.simpleicons.org/${c?.slug}/black`} />
-                            </Link>
-                        </div>
-                    })}
-                </div>
-            </div>
+
 
         </div>
     </div>

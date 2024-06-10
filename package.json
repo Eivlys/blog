@@ -5,14 +5,18 @@
   "scripts": {
     "dev": "npm run open-browser && next dev",
     "open-browser": "open http://localhost:3000",
-    "build": "next build",
+    "generate": "node scripts/generate-list.js",
+    "build": "npm run generate & next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/next-js": "^2.2.0",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@next/third-parties": "^14.2.3",
-    "@nextui-org/react": "^2.2.9",
-    "framer-motion": "^10.16.12",
+    "framer-motion": "^10.18.0",
     "next": "^14.2.3",
     "react": "^18",
     "react-dom": "^18",
