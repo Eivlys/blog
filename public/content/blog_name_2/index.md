@@ -5,4 +5,9 @@ title: Blog Name 2
 tag: test,demo
 ---
 
+# Blog Name 2
+
+Main content....
+Main content....
+
 Main content....
