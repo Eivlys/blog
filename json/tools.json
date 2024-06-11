@@ -2,21 +2,25 @@
     {
         "type": "Coding",
         "name": "Visual Studio Code",
-        "link": "https://code.visualstudio.com/"
+        "link": "https://code.visualstudio.com/",
+        "desc": "Code editor. Maybe not the best, but handy for front-end developers"
     },
     {
         "type": "Terminal",
         "name": "iTerm2",
-        "link": "https://iterm2.com/"
+        "link": "https://iterm2.com/",
+        "desc": "A greate replacement for Terminal"
     },
     {
-        "type": "Note",
+        "type": "note",
         "name": "Notion",
-        "link": "https://www.notion.so/"
+        "link": "https://www.notion.so/",
+        "desc": "Journals, plans, process tracking, and note. Basically, an extension of the brain "
     },
     {
         "type": "Diagram",
         "name": "Mermaid",
-        "link": "https://mermaid.js.org/"
+        "link": "https://mermaid.js.org/",
+        "desc": "Use simple syntax to generate complex diagrams, saves lots of trouble of dragging and dropping on the canvas, and can be used in Markdown"
     }
 ]

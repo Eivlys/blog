@@ -15,19 +15,6 @@ export default function Home() {
 		window.addEventListener('resize', resize);
 	}, [])
 
-	// const menus = [{
-	// 	slug: 'about',
-	// 	icon: '👩‍💻'
-	// },
-	// // 	{
-	// // 	slug: 'blog',
-	// // 	icon: '📝'
-	// // },
-	// {
-	// 	slug: 'toolbox',
-	// 	icon: '🧰'
-	// }];
-
 	return (
 		<main className="main">
 			<Navigator current='sylvie.zhang' />
@@ -44,13 +31,6 @@ export default function Home() {
 						<ListItem>Passionate about philosophy, psychology, and religions.</ListItem>
 					</UnorderedList>
 				</div>
-				{/* <div className='nav'>
-					{menus?.map((m =>
-						<Link key={m?.slug} href={`/${m?.slug}`}>
-							<Button colorScheme='purple' variant='outline' className='nav-item'>{m?.icon}{' '}{m?.slug?.toUpperCase()}</Button>
-						</Link>
-					))}
-				</div> */}
 				<div className='recent'></div>
 			</div>
 		</main >

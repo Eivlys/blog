@@ -9,7 +9,6 @@ import { Navigator } from '@/app/components/Navigator';
 export default function About() {
     return <div className='section'>
         <Navigator current='about' />
-
         <SectionHeader title='ABOUT' />
         <div className="section-content">
             {/* <div>This is my personal blog for sharing thought.</div> */}

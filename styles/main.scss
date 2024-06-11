@@ -55,20 +55,6 @@
     transform: translateX(-50%);
 }
 
-.nav {
-    @include flex-row-center;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 20px 0;
-    .nav-item {
-        width: 150px;
-        margin: 0 20px;
-        background: #fff;
-        font-family: $font-family-subtitle;
-        margin-bottom: 20px;
-    }
-}
-
 .desc {
     width: 50%;
     font-family: $font-family-subtitle;
@@ -79,6 +65,38 @@
     &-list {
         margin-top: 15px;
         font-size: $font-size-base;
+    }
+}
+
+// ======= components ========
+
+.navigator {
+    @include flex-row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    backdrop-filter: blur(100px);
+    background: linear-gradient(
+        135deg,
+        rgba(105, 158, 210, 0.1),
+        rgba(17, 50, 143, 0.1),
+        rgba(219, 23, 9, 0.1),
+        rgba(239, 157, 48, 0.3),
+        rgba(247, 189, 31, 0.3),
+        transparent
+    );
+
+    .nav-item {
+        @include flex-row-center;
+        align-items: center;
+        margin: 0 15px;
+        font-family: $font-family-subtitle;
+        font-size: $font-size-base;
+        &.active {
+            color: $font-color-text;
+        }
     }
 }
 
@@ -123,6 +141,9 @@
     .section-content {
         width: 70%;
         margin: 0 auto;
+        &.toolbox {
+            width: 50%;
+        }
     }
     .brief {
         text-align: center;
@@ -138,35 +159,6 @@
     }
 }
 
-.navigator {
-    @include flex-row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    height: 45px;
-    backdrop-filter: blur(100px);
-    background: linear-gradient(
-        135deg,
-        rgba(105, 158, 210, 0.1),
-        rgba(17, 50, 143, 0.1),
-        rgba(219, 23, 9, 0.1),
-        rgba(239, 157, 48, 0.3),
-        rgba(247, 189, 31, 0.3),
-        transparent
-    );
-
-    .nav-item {
-        @include flex-row-center;
-        align-items: center;
-        margin: 0 15px;
-        font-family: $font-family-subtitle;
-        font-size: $font-size-base;
-        &.active {
-            color: $font-color-text;
-        }
-    }
-}
 .section-header {
     margin: 0;
     width: 100%;
@@ -275,14 +267,17 @@
     }
     .section {
         .section-header {
-            height: 180px;
+            height: 120px;
             .title {
                 font-size: 3rem;
-                margin: 110px auto 0 10vw;
+                margin: 45px auto 0 10vw;
             }
         }
         .section-content {
             width: 85%;
+            &.toolbox {
+                width: 85%;
+            }
         }
     }
 }

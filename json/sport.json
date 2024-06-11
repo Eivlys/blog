@@ -1,0 +1,20 @@
+[
+    {
+        "type": "Glove",
+        "name": "Rival RB11",
+        "link": "",
+        "desc": "Boxing glove, suitable for bagging"
+    },
+    {
+        "type": "Handwraps",
+        "name": "Everlast 1910",
+        "link": "",
+        "desc": "Handwraps, wraps and spreads nicely"
+    },
+    {
+        "type": "fitness",
+        "name": "Athlean-X",
+        "link": "https://www.youtube.com/@athleanx",
+        "desc": "The training methods offered are scientific and effective"
+    }
+]
