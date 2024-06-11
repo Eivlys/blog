@@ -22,9 +22,15 @@ body {
         rgb(var(--background-start-rgb));
     margin: 0;
     padding: 0;
+    height: auto;
     position: relative;
 }
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+a {
+    color: #682eb5 !important;
+    font-weight: 500 !important;
 }

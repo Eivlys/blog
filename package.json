@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "npm run open-browser && next dev",
     "open-browser": "open http://localhost:3000",
-    "generate": "node scripts/generate-list.js",
-    "build": "npm run generate & next build",
+    "list": "node scripts/generate-list.js",
+    "build": "npm run list & next build",
     "start": "next start",
     "lint": "next lint"
   },

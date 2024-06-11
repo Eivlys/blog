@@ -78,7 +78,7 @@ function writeJsonToFile(filePath, data) {
     });
 }
 
-const directoryPath = './content';
+const directoryPath = './public/content';
 const outputFilePath = './json/blogList.json';
 const results = [];
 

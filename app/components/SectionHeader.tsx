@@ -1,8 +1,11 @@
 
 import '@/styles/global.css'
 
-export function SectionHeader() {
+export function SectionHeader({ title }
+    : { title: string }) {
     return (
-        <div></div>
+        <div className='section-header'>
+            <div className='title'>{title}</div>
+        </div>
     )
 }
