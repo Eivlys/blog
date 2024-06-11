@@ -1,8 +1,8 @@
 'use client'
 import '@/styles/main.scss'
-import Link from 'next/link'
 import React, { useEffect } from "react"
-import { Button, List, ListIcon, ListItem, UnorderedList } from '@chakra-ui/react'
+import { ListItem, UnorderedList } from '@chakra-ui/react'
+import { Navigator } from '@/app/components/Navigator'
 
 export default function Home() {
 	const resize = () => {
@@ -15,21 +15,23 @@ export default function Home() {
 		window.addEventListener('resize', resize);
 	}, [])
 
-	const menus = [{
-		slug: 'about',
-		icon: '👩‍💻'
-	},
-	// 	{
-	// 	slug: 'blog',
-	// 	icon: '📝'
+	// const menus = [{
+	// 	slug: 'about',
+	// 	icon: '👩‍💻'
 	// },
-	{
-		slug: 'toolbox',
-		icon: '🧰'
-	}];
+	// // 	{
+	// // 	slug: 'blog',
+	// // 	icon: '📝'
+	// // },
+	// {
+	// 	slug: 'toolbox',
+	// 	icon: '🧰'
+	// }];
 
 	return (
 		<main className="main">
+			<Navigator current='sylvie.zhang' />
+
 			<div className="banner">
 				<div className='name'>Sylvie Zhang</div>
 			</div>
@@ -42,13 +44,13 @@ export default function Home() {
 						<ListItem>Passionate about philosophy, psychology, and religions.</ListItem>
 					</UnorderedList>
 				</div>
-				<div className='nav'>
+				{/* <div className='nav'>
 					{menus?.map((m =>
 						<Link key={m?.slug} href={`/${m?.slug}`}>
 							<Button colorScheme='purple' variant='outline' className='nav-item'>{m?.icon}{' '}{m?.slug?.toUpperCase()}</Button>
 						</Link>
 					))}
-				</div>
+				</div> */}
 				<div className='recent'></div>
 			</div>
 		</main >

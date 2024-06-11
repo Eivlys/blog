@@ -4,10 +4,13 @@ import Equipment from '@/json/equipment.json';
 import Tools from '@/json/tools.json';
 import Link from 'next/link';
 import { SectionHeader } from '@/app/components/SectionHeader';
+import { Navigator } from '@/app/components/Navigator';
 
 export default function About() {
     return <div className='section'>
-        <SectionHeader title='About' />
+        <Navigator current='about' />
+
+        <SectionHeader title='ABOUT' />
         <div className="section-content">
             {/* <div>This is my personal blog for sharing thought.</div> */}
             <div className='brief'>This website is hosted on <Link href='https://vercel.com/' target='_blank'>Vercel</Link>, use <Link color="secondary" href='https://nextjs.org/' target='_blank'>Next.js</Link> framework</div>
