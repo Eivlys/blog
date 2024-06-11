@@ -1,7 +1,5 @@
 import React from "react"
 import Experiences from '@/json/experiences.json';
-import Equipment from '@/json/equipment.json';
-import Tools from '@/json/tools.json';
 import Link from 'next/link';
 import { SectionHeader } from '@/app/components/SectionHeader';
 import { Navigator } from '@/app/components/Navigator';
