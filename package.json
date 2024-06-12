@@ -6,6 +6,7 @@
     "dev": "npm run open-browser && next dev",
     "open-browser": "open http://localhost:3000",
     "list": "node scripts/generate-list.js",
+    "create": "node scripts/create-new-blog.js ",
     "build": "npm run list & next build",
     "start": "next start",
     "lint": "next lint"
