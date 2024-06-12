@@ -1,10 +1,10 @@
 
 import '@/styles/global.css'
 
-export function SectionHeader({ title }
+export function PageHeader({ title }
     : { title: string }) {
     return (
-        <div className='section-header'>
+        <div className='page-header'>
             <div className='title'>{title}</div>
         </div>
     )

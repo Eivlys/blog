@@ -1,12 +1,12 @@
 [
     {
-        "type": "",
+        "slug": "elsa",
         "name": "Elsa Speak",
         "link": "https://elsaspeak.com/en/",
         "desc": "An app that helps practice and correct pronunciation"
     },
     {
-        "type": "",
+        "slug": "papago",
         "name": "Papago",
         "link": "https://papago.naver.com/",
         "desc": "An translation app. Personally, I feel that the translation accuracy and semantics are better than other similar app, especially for Korean and Japanese translation"

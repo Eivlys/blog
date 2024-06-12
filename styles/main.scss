@@ -17,17 +17,6 @@
     overflow-y: scroll;
     overflow-x: hidden;
     position: relative;
-
-    // backdrop-filter: blur(50px);
-    // background: linear-gradient(
-    //     135deg,
-    //     rgba(105, 158, 210, 0.3),
-    //     rgba(17, 50, 143, 0.3),
-    //     rgba(219, 23, 9, 0.3),
-    //     rgba(239, 157, 48, 0.5),
-    //     rgba(247, 189, 31, 0.3),
-    //     transparent
-    // );
 }
 .banner {
     height: 40vh;
@@ -42,7 +31,6 @@
         font-size: 90px;
         text-align: center;
         color: $font-color-white;
-        // margin-top: 10vh;
     }
 }
 
@@ -135,6 +123,30 @@
     }
 }
 
+.page-header {
+    margin: 0;
+    width: 100%;
+    height: 150px;
+    backdrop-filter: blur(100px);
+    background: linear-gradient(
+        135deg,
+        rgba(105, 158, 210, 0.1),
+        rgba(17, 50, 143, 0.1),
+        rgba(219, 23, 9, 0.1),
+        rgba(239, 157, 48, 0.3),
+        rgba(247, 189, 31, 0.3),
+        transparent
+    );
+    overflow: hidden;
+    .title {
+        font-family: $font-family-title;
+        font-size: 4rem;
+        color: $font-color-title;
+        margin: 50px auto 0 10vw;
+        letter-spacing: -2px;
+    }
+}
+
 // ======== section ==========
 .section {
     min-height: 100vh;
@@ -156,30 +168,6 @@
         font-weight: 600;
         margin: 20px 0;
         text-align: center;
-    }
-}
-
-.section-header {
-    margin: 0;
-    width: 100%;
-    height: 150px;
-    backdrop-filter: blur(100px);
-    background: linear-gradient(
-        135deg,
-        rgba(105, 158, 210, 0.1),
-        rgba(17, 50, 143, 0.1),
-        rgba(219, 23, 9, 0.1),
-        rgba(239, 157, 48, 0.3),
-        rgba(247, 189, 31, 0.3),
-        transparent
-    );
-    overflow: hidden;
-    .title {
-        font-family: $font-family-title;
-        font-size: 4rem;
-        color: $font-color-title;
-        margin: 50px auto 0 10vw;
-        letter-spacing: -2px;
     }
 }
 
@@ -254,7 +242,7 @@
         height: 30vh;
         .name {
             padding: 12vh 20px 0;
-            font-size: 40px;
+            font-size: 50px;
         }
     }
     .content {
@@ -265,14 +253,14 @@
         width: 90%;
         margin: 30px auto;
     }
-    .section {
-        .section-header {
-            height: 120px;
-            .title {
-                font-size: 3rem;
-                margin: 45px auto 0 10vw;
-            }
+    .page-header {
+        height: 120px;
+        .title {
+            font-size: 3rem;
+            margin: 45px auto 0 10vw;
         }
+    }
+    .section {
         .section-content {
             width: 85%;
             &.toolbox {

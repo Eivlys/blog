@@ -1,36 +1,36 @@
 [
     {
-        "type": "",
+        "slug": "huberman",
         "name": "The Huberman Lab",
         "link": "",
         "desc": ""
     },
     {
-        "type": "",
+        "slug": "changelog",
         "name": "Changelog Master Feed",
         "link": "",
         "desc": ""
     },
     {
-        "type": "",
+        "slug": "making_sense",
         "name": "Making Sense with Sam Harris",
         "link": "",
         "desc": ""
     },
     {
-        "type": "",
+        "slug": "dissect",
         "name": "Dissect",
         "link": "",
         "desc": ""
     },
     {
-        "type": "",
+        "slug": "wizards",
         "name": "Very Bad Wizards",
         "link": "",
         "desc": ""
     },
     {
-        "type": "",
+        "slug": "philosophize",
         "name": "Philosophize This!",
         "link": "",
         "desc": ""
