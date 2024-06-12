@@ -75,7 +75,10 @@
         rgba(247, 189, 31, 0.3),
         transparent
     );
-
+    .home {
+        margin-left: 0;
+        margin-right: auto;
+    }
     .nav-item {
         @include flex-row-center;
         align-items: center;
@@ -84,6 +87,10 @@
         font-size: $font-size-base;
         &.active {
             color: $font-color-text;
+        }
+        &-name {
+            margin-top: 3px;
+            margin-left: 4px;
         }
     }
 }

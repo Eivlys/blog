@@ -17,7 +17,7 @@ export default function Home() {
 
 	return (
 		<main className="main">
-			<Navigator current='sylvie.zhang' />
+			<Navigator current='home' />
 
 			<div className="banner">
 				<div className='name'>Sylvie Zhang</div>
