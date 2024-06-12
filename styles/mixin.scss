@@ -1,13 +1,13 @@
 @mixin flex-row {
     display: flex;
     flex-direction: row;
-    align-self: center;
+    align-items: center;
 }
 
 @mixin flex-column {
     display: flex;
     flex-direction: column;
-    align-self: center;
+    align-items: center;
     justify-content: flex-start;
 }
 
@@ -19,4 +19,17 @@
 @mixin flex-row-start {
     @include flex-row;
     justify-content: flex-start;
+}
+
+@mixin linear-bg {
+    backdrop-filter: blur(100px);
+    background: linear-gradient(
+        135deg,
+        rgba(105, 158, 210, 0.1),
+        rgba(17, 50, 143, 0.1),
+        rgba(219, 23, 9, 0.1),
+        rgba(239, 157, 48, 0.3),
+        rgba(247, 189, 31, 0.3),
+        transparent
+    );
 }

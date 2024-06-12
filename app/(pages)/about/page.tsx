@@ -1,8 +1,6 @@
 import React from "react"
 import Experiences from '@/json/experiences.json';
 import Link from 'next/link';
-import { PageHeader } from '@/app/components/PageHeader';
-import { Navigator } from '@/app/components/Navigator';
 
 export default function About() {
     return <div className='section'>

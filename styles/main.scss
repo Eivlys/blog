@@ -60,28 +60,18 @@
 
 .navigator {
     @include flex-row;
+    @include linear-bg;
     flex-wrap: wrap;
     justify-content: flex-end;
-    align-items: center;
     width: 100%;
     height: 45px;
-    backdrop-filter: blur(100px);
-    background: linear-gradient(
-        135deg,
-        rgba(105, 158, 210, 0.1),
-        rgba(17, 50, 143, 0.1),
-        rgba(219, 23, 9, 0.1),
-        rgba(239, 157, 48, 0.3),
-        rgba(247, 189, 31, 0.3),
-        transparent
-    );
+
     .home {
         margin-left: 0;
         margin-right: auto;
     }
     .nav-item {
         @include flex-row-center;
-        align-items: center;
         margin: 0 15px;
         font-family: $font-family-subtitle;
         font-size: $font-size-base;
@@ -97,26 +87,15 @@
 
 .global-footer {
     @include flex-row;
-    align-items: center;
+    @include linear-bg;
     justify-content: space-between;
     width: 100%;
     height: 40px;
     position: relative;
     bottom: 0;
     width: 100%;
-    backdrop-filter: blur(100px);
-    // background: rgba(255, 255, 255, 0.7);
     padding: 0 20px;
-    backdrop-filter: blur(100px);
-    background: linear-gradient(
-        135deg,
-        rgba(105, 158, 210, 0.1),
-        rgba(17, 50, 143, 0.1),
-        rgba(219, 23, 9, 0.1),
-        rgba(239, 157, 48, 0.3),
-        rgba(247, 189, 31, 0.3),
-        transparent
-    );
+
     .word {
         font-family: $font-family-text;
         font-size: $font-size-base;
@@ -131,19 +110,10 @@
 }
 
 .page-header {
+    @include linear-bg;
     margin: 0;
     width: 100%;
     height: 150px;
-    backdrop-filter: blur(100px);
-    background: linear-gradient(
-        135deg,
-        rgba(105, 158, 210, 0.1),
-        rgba(17, 50, 143, 0.1),
-        rgba(219, 23, 9, 0.1),
-        rgba(239, 157, 48, 0.3),
-        rgba(247, 189, 31, 0.3),
-        transparent
-    );
     overflow: hidden;
     .title {
         font-family: $font-family-title;
@@ -189,7 +159,6 @@
     }
     .subtitle {
         @include flex-row;
-        align-items: center;
         font-family: $font-family-subtitle;
         margin: 15px 0;
         font-size: $font-size-base;
@@ -221,7 +190,6 @@
         }
         .tags {
             @include flex-row;
-            align-items: center;
             flex-wrap: wrap;
 
             .tag-item {
@@ -241,6 +209,29 @@
                 }
             }
         }
+    }
+}
+
+// ========== not found ============
+.not_found {
+    @include flex-column;
+    @include linear-bg;
+    width: 100%;
+    height: calc(100vh - 85px);
+    justify-content: center;
+    .title {
+        width: 100%;
+        font-family: $font-family-subtitle;
+        font-size: $font-size-base;
+        text-align: center;
+        margin-top: -100px;
+    }
+    .back {
+        width: 100%;
+        text-align: center;
+        font-family: $font-family-subtitle;
+        font-size: $font-size-medium;
+        padding: 50px 0;
     }
 }
 
