@@ -1,10 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 
+const directoryPath = './public/content';
+const outputFilePath = './json/blogList.json';
+const results = [];
+
 /**
- * Recursively find all markdown files in a directory.
- * @param {string} dir - The directory to search.
- * @param {function} callback - The callback to execute for each markdown file found.
+ * Recursively find all markdown files in a public/content.
  */
 function findMarkdownFiles(dir, callback) {
     fs.readdir(dir, (err, files) => {
@@ -34,8 +36,6 @@ function findMarkdownFiles(dir, callback) {
 
 /**
  * Read a markdown file and extract its front matter as JSON.
- * @param {string} filePath - The path of the markdown file.
- * @returns {object|null} The extracted front matter as JSON, or null if extraction fails.
  */
 function extractFrontMatter(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
@@ -63,9 +63,7 @@ function extractFrontMatter(filePath) {
 }
 
 /**
- * Write JSON data to a file.
- * @param {string} filePath - The path of the JSON file to write to.
- * @param {object} data - The JSON data to write.
+ * Write JSON data to a bloglist.
  */
 function writeJsonToFile(filePath, data) {
     const jsonContent = JSON.stringify(data, null, 2);
@@ -78,10 +76,6 @@ function writeJsonToFile(filePath, data) {
     });
 }
 
-const directoryPath = './public/content';
-const outputFilePath = './json/blogList.json';
-const results = [];
-
 findMarkdownFiles(directoryPath, (filePath) => {
     if (!filePath) return;
     const frontMatter = extractFrontMatter(filePath);
@@ -91,5 +85,3 @@ findMarkdownFiles(directoryPath, (filePath) => {
     console.log('findMarkdownFiles ~ results:', results);
     writeJsonToFile(outputFilePath, results);
 });
-
-console.log('Extracted JSON:', JSON.stringify(results, null, 2));
