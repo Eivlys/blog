@@ -82,6 +82,10 @@ findMarkdownFiles(directoryPath, (filePath) => {
     if (frontMatter) {
         results.push(frontMatter);
     }
+    // date descend
+    results.sort(
+        (a, b) => new Date(b?.date).getTime() - new Date(a?.date).getTime()
+    );
     console.log('findMarkdownFiles ~ results:', results);
     writeJsonToFile(outputFilePath, results);
 });

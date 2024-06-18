@@ -1,6 +1,6 @@
 ---
 slug: blog_name_2
-date: 2024-06-05
+date: 2024-06-02
 title: Blog Name 2
 tag: test,demo
 ---
