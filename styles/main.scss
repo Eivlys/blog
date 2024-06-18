@@ -19,7 +19,7 @@
     position: relative;
 }
 .banner {
-    height: 40vh;
+    height: 45vh;
     width: 100%;
     background: url('../public/bg.jpg') no-repeat center center;
     background-size: cover;
@@ -68,7 +68,21 @@
     position: sticky;
     top: 0;
     background-color: #fff;
+    z-index: 1;
 
+    &.homepage {
+        background: transparent !important;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+        position: absolute;
+        backdrop-filter: blur(0);
+        .nav-item {
+            color: rgba(255, 255, 255, 0.8);
+
+            &.active {
+                color: #fff;
+            }
+        }
+    }
     .home {
         margin-left: 0;
         margin-right: auto;
@@ -216,6 +230,70 @@
     }
 }
 
+// =========== blog list =========
+.blog-list {
+    width: 70%;
+    margin: 0 auto;
+    min-height: calc(100vh - 235px);
+    &-item {
+        padding: 30px 0 10px;
+        border-bottom: 1px solid #e2e2e2;
+    }
+    .list-title {
+        font-family: $font-family-subtitle;
+        font-size: $font-size-large;
+        color: $font-color-black !important;
+    }
+    .list-date {
+        font-family: $font-family-subtitle;
+        font-size: $font-size-base;
+        color: $font-color-light;
+        padding: 10px 0;
+    }
+    .list-tag-item {
+        margin: 10px 5px 10px 0;
+    }
+    .list-footer {
+        @include flex-row;
+        justify-content: space-between;
+    }
+}
+
+// ======= blog post ========
+.post {
+    width: 60%;
+    margin: 0 auto;
+    &-title {
+        font-family: $font-family-subtitle;
+        font-size: $font-size-large;
+        color: $font-color-title;
+        padding: 40px 0;
+    }
+    &-info {
+        width: 100%;
+        @include flex-row;
+        justify-content: space-between;
+        font-family: $font-family-text;
+        font-size: $font-size-base;
+        color: $font-color-light;
+    }
+    &-tag {
+    }
+    &-content {
+        padding: 50px 0 80px 0;
+        font-family: $font-family-text;
+        font-size: $font-size-base;
+        color: $font-color-text;
+        line-height: 1.6rem;
+        p {
+            margin: 1rem 0;
+        }
+        ul {
+            margin-left: 2rem;
+            padding: 10px 0;
+        }
+    }
+}
 // ========== not found ============
 .not_found {
     @include flex-column;
@@ -264,9 +342,9 @@
 
 @media only screen and (max-width: 768px) {
     .banner {
-        height: 30vh;
+        height: 32vh;
         .name {
-            padding: 12vh 20px 0;
+            padding: 14vh 20px 0;
             font-size: 50px;
         }
     }
@@ -292,5 +370,12 @@
                 width: 85%;
             }
         }
+    }
+    .blog-list,
+    .post {
+        width: 85%;
+    }
+    .blog-list {
+        min-height: calc(100vh - 205px);
     }
 }

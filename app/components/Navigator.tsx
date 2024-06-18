@@ -12,9 +12,10 @@ export function Navigator({ current }: { current: string }) {
             route: 'about',
             icon: '👩‍💻'
         },
-        // 	{
-        // 	slug: 'blog',
-        // 	icon: '📝'
+        // {
+        //     slug: 'blog',
+        //     route: 'blog',
+        //     icon: '📝'
         // },
         {
             slug: 'toolbox',
@@ -23,7 +24,7 @@ export function Navigator({ current }: { current: string }) {
         }];
 
     return (
-        <div className='navigator'>
+        <div className={`navigator ${current === 'home' ? 'homepage' : ''}`}>
             <Link key={'home'} href={`/`} className='home'>
                 <Button colorScheme='gray' variant='link' className={`nav-item ${current === 'home' ? 'active' : null}`}>
                     <Image src={icon} className='icon' width={20} height={20} alt='icon' /><span className='nav-item-name'>SZ</span>

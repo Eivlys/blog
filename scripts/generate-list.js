@@ -37,11 +37,11 @@ function findMarkdownFiles(dir, callback) {
 /**
  * Read a markdown file and extract its front matter as JSON.
  */
-function extractFrontMatter(filePath) {
+function extractProperties(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     const frontMatterRegex = /^---\n([\s\S]*?)\n---/;
     const match = content.match(frontMatterRegex);
-    // console.log('extractFrontMatter ~ match:', match?.[1]);
+    // console.log('extractProperties ~ match:', match?.[1]);
 
     if (match) {
         const frontMatter = match[1];
@@ -78,7 +78,7 @@ function writeJsonToFile(filePath, data) {
 
 findMarkdownFiles(directoryPath, (filePath) => {
     if (!filePath) return;
-    const frontMatter = extractFrontMatter(filePath);
+    const frontMatter = extractProperties(filePath);
     if (frontMatter) {
         results.push(frontMatter);
     }
