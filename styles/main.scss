@@ -65,6 +65,9 @@
     justify-content: flex-end;
     width: 100%;
     height: 45px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
 
     .home {
         margin-left: 0;
@@ -95,6 +98,7 @@
     bottom: 0;
     width: 100%;
     padding: 0 20px;
+    background-color: #efefef;
 
     .word {
         font-family: $font-family-text;
@@ -232,6 +236,29 @@
         font-family: $font-family-subtitle;
         font-size: $font-size-medium;
         padding: 50px 0;
+    }
+}
+
+// ======== switch language =========
+.switch_lan {
+    @include linear-bg;
+    @include flex-row;
+    justify-content: space-between;
+    width: 50px;
+    height: 25px;
+    border-radius: 25px;
+    padding: 0 4px;
+    .btn {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #fff;
+    }
+    .lan {
+        font-family: $font-family-subtitle;
+        font-size: $font-size-small;
+        color: $font-color-text;
+        font-weight: bold;
     }
 }
 
