@@ -321,22 +321,31 @@
 .switch_lan {
     @include linear-bg;
     @include flex-row;
+    background-color: rgba(255, 255, 255, 0.6);
     justify-content: space-between;
     width: 50px;
     height: 25px;
     border-radius: 25px;
-    padding: 0 4px;
+    padding: 0 3px;
+    margin-right: 10px;
+    &.reverse {
+        flex-direction: row-reverse;
+    }
+    &:hover {
+        cursor: pointer;
+    }
     .btn {
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        background: #fff;
+        background: rgba(255, 255, 255, 0.9);
     }
     .lan {
         font-family: $font-family-subtitle;
         font-size: $font-size-small;
         color: $font-color-text;
         font-weight: bold;
+        padding: 0 4px;
     }
 }
 

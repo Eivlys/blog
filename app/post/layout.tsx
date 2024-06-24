@@ -11,7 +11,7 @@ export default function PageLayout({
 
   return (
     <div className='page'>
-      <Navigator current={'blog'} />
+      <Navigator current={'blog'} locale='en' />
       {children}
     </div>
   )
