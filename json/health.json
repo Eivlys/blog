@@ -1,12 +1,12 @@
 [
     {
-        "type": "Glove",
+        "type": "glove",
         "name": "Rival RB11",
         "link": "",
         "desc": "Boxing glove, suitable for bagging"
     },
     {
-        "type": "Handwraps",
+        "type": "handwraps",
         "name": "Everlast 1910",
         "link": "",
         "desc": "Handwraps, wraps and spreads nicely"
@@ -16,5 +16,11 @@
         "name": "Athlean-X",
         "link": "https://www.youtube.com/@athleanx",
         "desc": "The training methods offered are scientific and effective"
+    },
+    {
+        "type": "meditation",
+        "name": "Waking Up",
+        "link": "https://dynamic.wakingup.com/guestpass/SC9773DED",
+        "desc": "Explains theoretically what meditation is, how to practice it, and what to expect at each stage. Answers a lot of my confusion and is very useful for people practicing on their own"
     }
 ]

@@ -1,6 +1,6 @@
 import React from "react"
 import Tools from '@/json/tools.json'
-import Sport from '@/json/sport.json'
+import Health from '@/json/health.json'
 import Language from '@/json/language.json'
 import Podcast from '@/json/podcast.json'
 import Link from 'next/link'
@@ -22,10 +22,10 @@ export default function Toolbox() {
                 </UnorderedList>
             </div>
 
-            <div className="section-title">Sport</div>
+            <div className="section-title">Fitness & Health</div>
             <div className="block">
                 <UnorderedList spacing={2}>
-                    {Sport.map((t: { type: string; link: string; name: string; desc: string; }) => {
+                    {Health.map((t: { type: string; link: string; name: string; desc: string; }) => {
                         return <ListItem key={t?.type}>
                             {t?.link
                                 ? <Link target='_blank' href={t?.link}>{t?.name}</Link>
@@ -60,6 +60,7 @@ export default function Toolbox() {
                             {t?.link
                                 ? <Link target='_blank' href={t?.link}>{t?.name}</Link>
                                 : t?.name}
+                            {t?.desc ? ': ' : ''}
                             {t?.desc}
                         </ListItem>
                     })}

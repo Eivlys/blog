@@ -11,7 +11,7 @@ export default function About({ searchParams }: { searchParams: { [k: string]: s
             {/* <div>This is my personal blog for sharing thought.</div> */}
             {locale === 'en'
                 ? <div className='brief'>This website is hosted on <Link href='https://vercel.com/' target='_blank'>Vercel</Link>, use <Link color="secondary" href='https://nextjs.org/' target='_blank'>Next.js</Link> framework</div>
-                : <div className='brief'>本站部署在<Link href='https://vercel.com/' target='_blank'>Vercel</Link>, 使用<Link color="secondary" href='https://nextjs.org/' target='_blank'>Next.js</Link>搭建</div>
+                : <div className='brief'>本站部署于<Link href='https://vercel.com/' target='_blank'>Vercel</Link>, 使用<Link color="secondary" href='https://nextjs.org/' target='_blank'>Next.js</Link>搭建</div>
             }
 
             <div className="section-title">{locale === 'en' ? 'Work' : '工作经历'}</div>
