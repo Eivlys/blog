@@ -9,6 +9,20 @@ const directoryPath = `./public/content/${slug}`;
 if (!slug) {
     console.error('Need a slug');
 } else {
+    // Validate slug format
+    if (!/^[a-z0-9-]+$/.test(slug)) {
+        console.error(
+            'Slug must contain only lowercase letters, numbers and hyphens'
+        );
+        process.exit(1);
+    }
+
+    // Validate date format
+    if (isNaN(today.getTime())) {
+        console.error('Invalid date');
+        process.exit(1);
+    }
+
     // markdown content
     const markdownContent = `---
 slug: ${slug}

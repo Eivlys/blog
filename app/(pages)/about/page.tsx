@@ -20,7 +20,7 @@ export default function About({ searchParams }: { searchParams: { [k: string]: s
                     return <div key={idx} className="block-item">
                         <div className="subtitle">
                             <div className="icon">
-                                {x?.icon ? <img height="20" width="20" src={`https://cdn.simpleicons.org/${x?.icon}/66666699`} /> : <div className="text-center text-xs">❤</div>}
+                                {x?.icon ? <img height="20" width="20" alt={x?.icon} src={`https://cdn.simpleicons.org/${x?.icon}/66666699`} /> : <div className="text-center text-xs">❤</div>}
                             </div>
                             {x?.year?.toUpperCase()}
                         </div>

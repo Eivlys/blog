@@ -23,6 +23,7 @@ export default function Home({ searchParams }: { searchParams: { [k: string]: st
 				<Navigator current='home' locale={locale} />
 
 				<div className="banner">
+					<div className='avatar'></div>
 					<div className='name'>Sylvie Zhang</div>
 				</div>
 				<div className="content">
@@ -31,12 +32,14 @@ export default function Home({ searchParams }: { searchParams: { [k: string]: st
 						{locale === 'en'
 							? <UnorderedList spacing={2} className='desc-list'>
 								<ListItem>Front-end developer since 2016, using React, Node.js, and Typescript.</ListItem>
-								<ListItem>Play kickboxing in my spare time.</ListItem>
+								<ListItem>Recently back to school @University of Waterl</ListItem>
+								<ListItem>Play kickboxing in my spare time {"(since 2021)"}.</ListItem>
 								<ListItem>Passionate about philosophy, psychology, and religions.</ListItem>
 							</UnorderedList>
 							: <UnorderedList spacing={2} className='desc-list'>
 								<ListItem>自 2016 年起从事前端开发的工作，日常使用 React, Node.js, 和 Typescript</ListItem>
-								<ListItem>闲暇时间练练拳击</ListItem>
+								<ListItem>最近重回校园 @University of Waterloo</ListItem>
+								<ListItem>闲暇时间练练拳击 {"(从2021年开始)"}</ListItem>
 								<ListItem>对哲学，心理学和宗教感兴趣</ListItem>
 							</UnorderedList>
 						}
