@@ -1,15 +1,21 @@
 [
     {
         "type": "glove",
-        "name": "Rival RB11",
+        "name": "Boxing Glove",
         "link": "",
-        "desc": "Boxing glove, suitable for bagging"
+        "desc": "Rival RS11V Evolution, 14oz, suitable for daily practice, offering great protection to fist and wrist"
     },
     {
         "type": "handwraps",
-        "name": "Everlast 1910",
+        "name": "Handwraps",
         "link": "",
-        "desc": "Handwraps, wraps and spreads nicely"
+        "desc": "Everlast 1910, wraps and spreads nicely"
+    },
+    {
+        "type": "training",
+        "name": "Resistance Training App",
+        "link": "https://www.joinladder.com/",
+        "desc": "Ladder. You can choose the resistance training plan based on the style of the coach and training contents, and easy to switch between plans to find the one that suitable for you."
     },
     {
         "type": "fitness",

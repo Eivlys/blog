@@ -12,9 +12,21 @@
         "desc": "A great source of information and news about development and technology"
     },
     {
-        "slug": "making_sense",
-        "name": "Making Sense with Sam Harris",
-        "link": "https://open.spotify.com/show/5rgumWEx4FsqIY8e1wJNAk?si=22661a4a0b954e90",
+        "slug": "vergecase",
+        "name": "The Vergecast",
+        "link": "https://open.spotify.com/show/08zQP2peZmM9GrcKShLZvC?si=e0724dfc13314ee1",
+        "desc": ""
+    },
+    {
+        "slug": "doac",
+        "name": "The Diary of A CEO",
+        "link": "https://open.spotify.com/show/7iQXmUT7XGuZSzAMjoNWlX?si=e3b9fb32ea584ec1",
+        "desc": ""
+    },
+    {
+        "slug": "if_books_counld_kill",
+        "name": "If Books Could Kill",
+        "link": "https://open.spotify.com/show/2khJBoF73ujIATWUFtSxLD?si=555a26cb643a41c9",
         "desc": ""
     },
     {
@@ -34,6 +46,12 @@
         "name": "Philosophize This!",
         "link": "https://open.spotify.com/show/2Shpxw7dPoxRJCdfFXTWLE?si=da2c1e728ee148a0",
         "desc": "There was further thinking about things in life on a philosophical level, and many of the author's points resonated with me."
+    },
+    {
+        "slug": "making_sense",
+        "name": "Making Sense with Sam Harris",
+        "link": "https://open.spotify.com/show/5rgumWEx4FsqIY8e1wJNAk?si=22661a4a0b954e90",
+        "desc": ""
     },
     {
         "slug": "x_official",
@@ -69,6 +87,18 @@
         "slug": "money_talk",
         "name": "梵高 MoneyTalk",
         "link": "https://www.xiaoyuzhoufm.com/podcast/63af151c4ded9d81d0a11f02",
+        "desc": ""
+    },
+    {
+        "slug": "mostly_harmless",
+        "name": "基本无害",
+        "link": "https://www.xiaoyuzhoufm.com/podcast/5eae66d1418a84a046472b4d",
+        "desc": ""
+    },
+    {
+        "slug": "face_fund",
+        "name": "面基",
+        "link": "https://www.xiaoyuzhoufm.com/podcast/6388760f22567e8ea6ad070f",
         "desc": ""
     }
 ]

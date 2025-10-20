@@ -43,7 +43,7 @@ export function Navigator({ current, locale }: {
                     </Button>
                 </Link>
             ))}
-            <SwitchLan locale={locale} />
+            {current !== 'toolbox' ? <SwitchLan locale={locale} /> : null}
         </div>
     )
 }

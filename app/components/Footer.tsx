@@ -6,14 +6,14 @@ import { Tooltip } from '@chakra-ui/react';
 export function Footer() {
     return (
         <div className="global-footer">
-            <div className="word">© 2024 Sylvie Zhang</div>
+            <div className="word">© 2025 Sylvie Zhang</div>
             <div className='link'>
                 {Contact.map(c => {
                     return <div key={c?.slug} className="mx-1">
                         <Link href={c?.link} target="_blank">
                             {c?.slug === 'linkedin'
                                 ? <Tooltip
-                                    label="the LinkedIn icon is not available 🫥"
+                                    label="🫥 sorry, the LinkedIn icon is not available"
                                     size="xs"
                                     hasArrow
                                     placement="top">
