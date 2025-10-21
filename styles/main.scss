@@ -1,5 +1,5 @@
-@import './var.scss';
-@import './mixin.scss';
+@use './var';
+@use './mixin';
 
 @font-face {
     font-family: SouthAustria;
@@ -12,7 +12,7 @@
 }
 
 .main {
-    @include flex-column;
+    @include mixin.flex-column;
     min-height: calc(100vh - 40px);
     min-height: calc(var(--vh, 1vh) * 100 - 40px);
     overflow-y: scroll;
@@ -20,26 +20,26 @@
     position: relative;
 }
 .banner {
-    @include flex-row-center;
+    @include mixin.flex-row-center;
     height: 35vh;
     width: 100%;
     // background: url('../public/bg.jpg') no-repeat center center;
     // background-size: cover;
-    .avatar{
+    .avatar {
         background: url('../public/avatar.png') no-repeat center center;
         background-size: cover;
         width: 120px;
         height: 120px;
     }
     .name {
-        font-family: $font-family-title;
+        font-family: var.$font-family-title;
         font-weight: normal;
         font-style: normal;
         padding-top: 25px;
         font-size: 90px;
         text-align: center;
-        // color: $font-color-white;
-        color:$font-color-black
+        // color: var.$font-color-white;
+        color: var.$font-color-black;
     }
 }
 
@@ -56,22 +56,22 @@
 
 .desc {
     width: 50%;
-    font-family: $font-family-subtitle;
-    font-size: $font-size-medium;
-    color: $font-color-text;
+    font-family: var.$font-family-subtitle;
+    font-size: var.$font-size-medium;
+    color: var.$font-color-text;
     margin: 50px auto;
     letter-spacing: -1px;
     &-list {
         margin-top: 15px;
-        font-size: $font-size-base;
+        font-size: var.$font-size-base;
     }
 }
 
 // ======= components ========
 
 .navigator {
-    @include flex-row;
-    @include linear-bg;
+    @include mixin.flex-row;
+    @include mixin.linear-bg;
     flex-wrap: wrap;
     justify-content: flex-end;
     width: 100%;
@@ -80,7 +80,7 @@
     top: 0;
     background-color: #fff;
     z-index: 1;
-    
+
     &.homepage {
         background: url('../public/bg.jpg') no-repeat center center;
         background-size: cover;
@@ -101,12 +101,12 @@
         margin-right: auto;
     }
     .nav-item {
-        @include flex-row-center;
+        @include mixin.flex-row-center;
         margin: 0 15px;
-        font-family: $font-family-subtitle;
-        font-size: $font-size-base;
+        font-family: var.$font-family-subtitle;
+        font-size: var.$font-size-base;
         &.active {
-            color: $font-color-text;
+            color: var.$font-color-text;
         }
         &-name {
             margin-top: 3px;
@@ -116,8 +116,8 @@
 }
 
 .global-footer {
-    @include flex-row;
-    @include linear-bg;
+    @include mixin.flex-row;
+    @include mixin.linear-bg;
     justify-content: space-between;
     width: 100%;
     height: 40px;
@@ -128,32 +128,32 @@
     background-color: #efefef;
 
     .word {
-        font-family: $font-family-text;
-        font-size: $font-size-base;
-        color: $font-color-text;
+        font-family: var.$font-family-text;
+        font-size: var.$font-size-base;
+        color: var.$font-color-text;
     }
     .link {
-        @include flex-row-center;
+        @include mixin.flex-row-center;
     }
     .link-item {
         margin-left: 10px;
-        &.text-xs{
-            color: $font-color-black;
-            font-size: $font-size-small;
+        &.text-xs {
+            color: var.$font-color-black;
+            font-size: var.$font-size-small;
         }
     }
 }
 
 .page-header {
-    @include linear-bg;
+    @include mixin.linear-bg;
     margin: 0;
     width: 100%;
     height: 150px;
     overflow: hidden;
     .title {
-        font-family: $font-family-title;
+        font-family: var.$font-family-title;
         font-size: 4rem;
-        color: $font-color-title;
+        color: var.$font-color-title;
         margin: 50px auto 0 10vw;
         letter-spacing: -2px;
     }
@@ -174,9 +174,9 @@
         margin: 30px auto;
     }
     .section-title {
-        font-family: $font-family-text;
+        font-family: var.$font-family-text;
         font-size: 1.4rem;
-        color: $font-color-title;
+        color: var.$font-color-title;
         font-weight: 600;
         margin: 20px 0;
         text-align: center;
@@ -189,21 +189,21 @@
     .icon {
         width: 20px;
         height: 20px;
-        line-height: $font-size-base;
+        line-height: var.$font-size-base;
         margin-right: 10px;
     }
     .subtitle {
-        @include flex-row;
-        font-family: $font-family-subtitle;
+        @include mixin.flex-row;
+        font-family: var.$font-family-subtitle;
         margin: 15px 0;
-        font-size: $font-size-base;
+        font-size: var.$font-size-base;
         width: 100%;
         text-align: center;
     }
     .block-item:hover {
         .subtitle {
             font-weight: bold;
-            color: $font-color-title;
+            color: var.$font-color-title;
         }
         // .icon {
         //     box-shadow: 0 0 20px #fce4d3;
@@ -212,19 +212,19 @@
     .block-content {
         margin-bottom: 40px;
         .title {
-            font-family: $font-family-text;
-            font-size: $font-size-medium;
+            font-family: var.$font-family-text;
+            font-size: var.$font-size-medium;
             font-weight: 600;
         }
         .desc {
             width: 100%;
-            font-family: $font-family-text;
+            font-family: var.$font-family-text;
             font-size: 1.1rem;
             margin: 15px 0;
             letter-spacing: normal;
         }
         .tags {
-            @include flex-row;
+            @include mixin.flex-row;
             flex-wrap: wrap;
 
             .tag-item {
@@ -232,13 +232,13 @@
                 border-radius: 1rem;
                 text-align: center;
                 margin: 0 6px 8px 0;
-                font-family: $font-family-text;
-                font-size: $font-size-small;
+                font-family: var.$font-family-text;
+                font-size: var.$font-size-small;
                 border: 2px solid #fce4d3;
                 &:hover {
                     border: none;
                     background-color: #ff8834;
-                    color: $font-color-white;
+                    color: var.$font-color-white;
                     font-weight: bold;
                     border: 2px solid #ff8834;
                 }
@@ -257,21 +257,21 @@
         border-bottom: 1px solid #e2e2e2;
     }
     .list-title {
-        font-family: $font-family-subtitle;
-        font-size: $font-size-large;
-        color: $font-color-black !important;
+        font-family: var.$font-family-subtitle;
+        font-size: var.$font-size-large;
+        color: var.$font-color-black !important;
     }
     .list-date {
-        font-family: $font-family-subtitle;
-        font-size: $font-size-base;
-        color: $font-color-light;
+        font-family: var.$font-family-subtitle;
+        font-size: var.$font-size-base;
+        color: var.$font-color-light;
         padding: 10px 0;
     }
     .list-tag-item {
         margin: 10px 5px 10px 0;
     }
     .list-footer {
-        @include flex-row;
+        @include mixin.flex-row;
         justify-content: space-between;
     }
 }
@@ -281,26 +281,26 @@
     width: 60%;
     margin: 0 auto;
     &-title {
-        font-family: $font-family-subtitle;
-        font-size: $font-size-large;
-        color: $font-color-title;
+        font-family: var.$font-family-subtitle;
+        font-size: var.$font-size-large;
+        color: var.$font-color-title;
         padding: 40px 0;
     }
     &-info {
         width: 100%;
-        @include flex-row;
+        @include mixin.flex-row;
         justify-content: space-between;
-        font-family: $font-family-text;
-        font-size: $font-size-base;
-        color: $font-color-light;
+        font-family: var.$font-family-text;
+        font-size: var.$font-size-base;
+        color: var.$font-color-light;
     }
     &-tag {
     }
     &-content {
         padding: 50px 0 80px 0;
-        font-family: $font-family-text;
-        font-size: $font-size-base;
-        color: $font-color-text;
+        font-family: var.$font-family-text;
+        font-size: var.$font-size-base;
+        color: var.$font-color-text;
         line-height: 1.6rem;
         p {
             margin: 1rem 0;
@@ -313,31 +313,31 @@
 }
 // ========== not found ============
 .not_found {
-    @include flex-column;
-    @include linear-bg;
+    @include mixin.flex-column;
+    @include mixin.linear-bg;
     width: 100%;
     height: calc(100vh - 85px);
     justify-content: center;
     .title {
         width: 100%;
-        font-family: $font-family-subtitle;
-        font-size: $font-size-base;
+        font-family: var.$font-family-subtitle;
+        font-size: var.$font-size-base;
         text-align: center;
         margin-top: -100px;
     }
     .back {
         width: 100%;
         text-align: center;
-        font-family: $font-family-subtitle;
-        font-size: $font-size-medium;
+        font-family: var.$font-family-subtitle;
+        font-size: var.$font-size-medium;
         padding: 50px 0;
     }
 }
 
 // ======== switch language =========
 .switch_lan {
-    @include linear-bg;
-    @include flex-row;
+    @include mixin.linear-bg;
+    @include mixin.flex-row;
     background-color: rgba(255, 255, 255, 0.6);
     justify-content: space-between;
     width: 50px;
@@ -358,9 +358,9 @@
         background: rgba(255, 255, 255, 0.9);
     }
     .lan {
-        font-family: $font-family-subtitle;
-        font-size: $font-size-small;
-        color: $font-color-text;
+        font-family: var.$font-family-subtitle;
+        font-size: var.$font-size-small;
+        color: var.$font-color-text;
         font-weight: bold;
         padding: 0 4px;
     }
@@ -368,10 +368,10 @@
 
 @media only screen and (max-width: 768px) {
     .banner {
-        @include flex-column;
+        @include mixin.flex-column;
         height: 32vh;
         padding: 11vh 20px 0;
-        .avartar{
+        .avartar {
             width: 80px;
             height: 80px;
         }

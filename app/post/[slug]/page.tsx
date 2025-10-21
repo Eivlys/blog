@@ -2,17 +2,18 @@ import '@/styles/main.scss'
 import { extractProperties } from '@/app/utils';
 import { Tag } from '@chakra-ui/react';
 import { headers } from 'next/headers';
-import React from "react"
+import React, { use } from "react"
 import Markdown from 'react-markdown';
 
+type Params = Promise<{ slug: string }>
+type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>
 
-export default async function Blog({
-    params,
-    // searchParams,
-}: {
-    params?: { slug: string };
-    // searchParams?: { [key: string]: string | string[] | undefined };
+export default async function Blog(props: {
+    params: Params,
+    searchParams: SearchParams,
 }) {
+    const params = use(props.params)
+
     const headersList = headers();
     const domain = headersList.get('host') || "";
 
