@@ -2,8 +2,6 @@ import React, { Suspense } from "react"
 import Experiences from '@/json/experiences.json';
 import Link from 'next/link';
 
-// test deploy
-
 export default function About({ searchParams }: { searchParams: { [k: string]: string } }) {
     const { locale = 'en' } = searchParams || {};
     const content = locale === 'en' ? Experiences?.en : Experiences?.zh; //TODO:add type

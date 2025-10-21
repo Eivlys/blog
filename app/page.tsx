@@ -1,10 +1,15 @@
 'use client'
 import '@/styles/main.scss'
-import React, { Suspense, useEffect } from "react"
+import React, { Suspense, useEffect, use } from "react"
 import { ListItem, UnorderedList } from '@chakra-ui/react'
 import { Navigator } from '@/app/components/Navigator'
 
-export default function Home({ searchParams }: { searchParams: { [k: string]: string } }) {
+type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>
+
+export default function Home(props: {
+	searchParams: SearchParams
+}) {
+	const searchParams = use(props.searchParams)
 	const { locale = 'en' } = searchParams || {};
 
 	const resize = () => {
