@@ -1,8 +1,14 @@
-import React, { Suspense } from "react"
+'use client'
+
+import React, { Suspense, use } from "react"
 import Experiences from '@/json/experiences.json';
 import Link from 'next/link';
 
-export default function About({ searchParams }: { searchParams: { [k: string]: string } }) {
+type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>
+
+export default function About(props: { searchParams: SearchParams }) {
+    const searchParams = use(props.searchParams)
+
     const { locale = 'en' } = searchParams || {};
     const content = locale === 'en' ? Experiences?.en : Experiences?.zh; //TODO:add type
     //TODO: Suspense boundary 

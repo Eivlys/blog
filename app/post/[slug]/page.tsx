@@ -8,10 +8,10 @@ import Markdown from 'react-markdown';
 
 export default async function Blog({
     params,
-    searchParams,
+    // searchParams,
 }: {
     params?: { slug: string };
-    searchParams?: { [key: string]: string | string[] | undefined };
+    // searchParams?: { [key: string]: string | string[] | undefined };
 }) {
     const headersList = headers();
     const domain = headersList.get('host') || "";
